@@ -5,6 +5,7 @@ extension ContextExtension on BuildContext {
   ThemeData get theme => Theme.of(this);
   bool get isDark => Theme.of(this).brightness == Brightness.dark;
   double get width => MediaQuery.of(this).size.width;
+  void pop<T>([T? result]) => Navigator.of(this).pop<T>(result);
 
   // Color Related Extensions
   Color get primaryColor => theme.primaryColor;
